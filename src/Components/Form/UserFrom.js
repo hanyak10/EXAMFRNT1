@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './UserForm.css';
+import axios from 'axios';
 const UserForm = () => {
   // State to hold form data
   const [formData, setFormData] = useState({
@@ -23,9 +24,27 @@ const UserForm = () => {
 
   // Handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
     // You can handle form submission logic here, e.g., send data to API
     console.log(formData);
+
+    const firstname =e.target.firstname.value;
+    const lastname =e.target.lastname.value;
+    const password =e.target.password.value;
+    const username =e.target.username.value;
+    const email =e.target.email.value;
+    const phone =e.target.phone.value;
+
+    const data ={firstname,lastname,username,password,email,phone};
+    axios.
+    post("http://localhost:8080/user/",data).
+    then((formData)=>{
+      console.log(formData);
+      e.target.reset();
+    }).
+    catch((error)=>{
+      console.log(error);
+    })
     // Clear form fields if needed
     alert('submit');
     setFormData({
