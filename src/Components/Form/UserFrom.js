@@ -27,20 +27,34 @@ const UserForm = () => {
     // You can handle form submission logic here, e.g., send data to API
     console.log(formData);
     // Clear form fields if needed
-    // setFormData({
-    //   username: '',
-    //   password: '',
-    //   firstname: '',
-    //   lastname: '',
-    //   email: '',
-    //   phone: '',
-    //   profile: ''
-    // });
+    alert('submit');
+    setFormData({
+      username: '',
+      password: '',
+      firstname: '',
+      lastname: '',
+      email: '',
+      phone: '',
+      profile: ''
+    });
+  };
+  const handleClearForm = () => {
+    setFormData({
+      username: '',
+      password: '',
+      firstname: '',
+      lastname: '',
+      email: '',
+      phone: '',
+      profile: ''
+    });
   };
 
   return (
     <div className='container'>
+  
       <form onSubmit={handleSubmit}>
+      <h3>Register Here</h3>
       <div>
         <input 
           type="text" 
@@ -106,7 +120,7 @@ const UserForm = () => {
 
      <div className='btn'>
       <button className="btns" type="submit">Submit</button>
-      <button className="btnr" type="reset">Reset</button>
+      <button className="btnr" onClick={handleClearForm} type="reset">Reset</button>
      </div>
     </form>
 

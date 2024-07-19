@@ -4,6 +4,12 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: "Mukta";
+}
+h3{
+ font-weight: 500;
+ text-transform: uppercase;
+ word-spacing: 5px;
 }
 input{
     width: 100%;
@@ -32,6 +38,7 @@ button{
     border-radius: 8px;
     border: 1px solid #958f8f68;
     outline: none;
+    cursor: pointer;
 }
 .btn{
     display: flex;
