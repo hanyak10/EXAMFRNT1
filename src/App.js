@@ -1,14 +1,22 @@
-import './App.css';
-//import UserForm from './Components/Form/UserFrom';
-import LoginForm from './Components/Login/LoginForm';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './components/Login/LoginForm';
+import Register from './components/Form/UserFrom';
+import NavBar from './Components/Navbar/NavBar';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      {/* <UserForm /> */}
-      <LoginForm/>
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          {/* Other routes if needed */}
+        </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

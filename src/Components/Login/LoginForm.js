@@ -1,4 +1,5 @@
 import './Login.css';
+import animation from '../../assets/images.jfif'
 import React, { useState } from 'react';
 
 const LoginForm = () => {
@@ -24,9 +25,11 @@ const LoginForm = () => {
   };
 
   return (
+ 
     <div className='container'>
-    
-        <form onSubmit={handleSubmit}>
+
+   <form onSubmit={handleSubmit}>
+   <img src={animation}/>
         <h1>LOGIN HERE!!</h1>
       <input
           type="text"
