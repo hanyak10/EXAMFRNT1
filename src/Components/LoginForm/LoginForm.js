@@ -26,10 +26,10 @@ const LoginForm = () => {
 
   return (
  
-    <div className='container'>
+    <div className='login-container'>
 
-   <form onSubmit={handleSubmit}>
-   <img src={animation}/>
+   <form className='login-form' onSubmit={handleSubmit}>
+   <img alt='Logo' src={animation}/>
         <h1>LOGIN HERE!!</h1>
       <input
           type="text"

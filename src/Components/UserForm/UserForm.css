@@ -5,18 +5,13 @@
     justify-content: center;
     height: 100vh;
     font-family: "Mukta";
-    margin-top: -20px;
+    background-color: #f5f5f5;
 }
-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    flex-direction: column;
-    gap: 20px;
-}
-button{
-    height: 35px;
-    width: 100px;
+h3{
+ font-weight: 600;
+ text-transform: uppercase;
+ word-spacing: 5px;
+ text-align: center;
 }
 input{
     width: 100%;
@@ -29,11 +24,18 @@ input{
     font-family: "Mukta";
     font-weight: 600;
 }
-img{
-    height: 150px;
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60vh;
+}
+input::placeholder{
+    color: #333;
+    padding: 5px;
 }
 button{
-    height: 40px;
+    height: 30px;
     width: 100px;
     border-radius: 8px;
     border: 1px solid #958f8f68;

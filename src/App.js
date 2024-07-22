@@ -1,21 +1,25 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './components/Login/LoginForm';
-import Register from './components/Form/UserFrom';
+import React from "react";
+import './App.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import NavBar from './Components/Navbar/NavBar';
+import LoginForm from "./Components/LoginForm/LoginForm";
+import UserForm from "./Components/UserForm/UserFrom";
 
 const App = () => {
   return (
+    <>
     <Router>
-      <div className="App">
         <NavBar />
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          {/* Other routes if needed */}
-        </Switch>
-      </div>
+        <Routes>
+          <Route exact path="/login" element={<LoginForm/>} />
+          <Route exact path="/register" element={<UserForm/>} />
+        </Routes>
     </Router>
+    </>
   );
 };
 
